@@ -67,3 +67,4 @@ seal/                     # 레포 루트
 - 기술 결정은 반드시 `memory/decisions.md`에 ADR로
 - 완료 태스크는 삭제하지 말고 `completed.md`로 이동
 # sealgame
+# sealgame
