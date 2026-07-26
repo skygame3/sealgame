@@ -10,7 +10,7 @@ Harness Version: 1.1
 > 이 문서는 프로젝트 헌법입니다. 모든 AI 에이전트는 이 파일을 가장 먼저 읽습니다.
 > 다른 문서와 충돌할 경우 이 문서가 최우선입니다.
 
-_Last updated: 2026-07-24_
+_Last updated: 2026-07-26_
 
 ---
 
@@ -26,6 +26,21 @@ _Last updated: 2026-07-24_
 | Infrastructure | Firebase (Auth / RTDB / Cloud Functions), EAS Build, GitHub |
 | Repo Structure | Single Repo (app/ + functions/ 워크스페이스) |
 | Harness Tier | standard |
+
+---
+
+## Human Team
+
+2인 개발 체제 (2026-07-26~, ADR-013).
+
+| 구성원 | GitHub | 소유 코드 영역 | 비고 |
+|--------|--------|---------------|------|
+| **Lead** | [@internalforces](https://github.com/internalforces) | `engine/`, `ai/`, `net/`(Firebase/Functions), 아키텍처, 보안, 배포 | 게임 코어 규칙·서버 신뢰 관련 최종 결정권 |
+| **Partner** (게임 개발 입문자) | [@kimsky671](https://github.com/kimsky671) | `components/`, `screens/`, 애니메이션, i18n 문자열, 콘텐츠(보드 JSON, 스토어 에셋) | `docs/PROJECT-GUIDE.md`로 온보딩. `engine/` 판정 로직을 직접 구현하지 않고 결과만 소비 |
+
+- **코드 오너십 경계**: Partner의 PR이 `engine/`, `net/`, Firebase 설정, Security Rules를 건드리면 병합 전 Lead 리뷰 필수
+- 세션에서 AI 에이전트 역할(Planner/Implementer 등)과 사람(Lead/Partner)은 별개 축 — 태스크 상세에는 둘 다 기록 (`tasks/active.md` 템플릿 참조)
+- 마일스톤별 담당 배정: `roadmap.md`, 태스크별 배정: `tasks/backlog.md`의 Owner 열
 
 ---
 

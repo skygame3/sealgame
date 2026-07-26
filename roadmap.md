@@ -7,11 +7,25 @@ Harness Version: 1.1
 
 # roadmap.md — SEAL 로드맵
 
-_Last updated: 2026-07-24_
+_Last updated: 2026-07-26_
 
 ## Goal
 
 포획으로 노드를 봉인하고 결정 자원으로 보드를 복구·확장하는 2인 추상 전략 보드게임을 iOS/Android 앱으로 구현한다.
+
+---
+
+## 팀 역할 분담 (ADR-013)
+
+2인 개발 체제: **Lead** [@internalforces](https://github.com/internalforces)(본인) + **Partner** [@kimsky671](https://github.com/kimsky671)(게임 개발 입문자). 원칙은 기존 레이어 분리(ADR-004)를 그대로 인적 경계로 사용 — Lead가 `engine/ai/net`, Partner가 `components/screens`(UI)를 담당. 태스크 단위 배정은 `tasks/backlog.md`의 Owner 열이 정본이며, 아래는 마일스톤별 요약이다.
+
+| Milestone | Lead 담당 | Partner 담당 | 비고 |
+|-----------|-----------|--------------|------|
+| **M0 — 기반** | CI, 폴더 구조, 보드 스키마 설계, MMKV 래퍼 | H형 보드 데이터 작성, i18n 구조 셋업 | 프로젝트 초기화·린트 설정은 Pair로 온보딩 겸 진행 |
+| **M1 — 규칙 엔진 & 로컬 플레이** | `engine/` 전체(합법수·포획·봉인·결정·종료 판정), 단위 테스트 100%, 자동저장/생명주기 | SVG 보드 렌더러, 로컬 핫시트 화면 | `GameState`/`Move` 타입(TASK-010)을 최우선 확정해야 Partner가 병렬 착수 가능. Zustand 스토어 연결은 Pair |
+| **M2 — AI & 게임 느낌** | Minimax/평가함수/시뮬레이터/BAL-001 검증, 탐색 비동기화 | 봉인·포획 애니메이션, 햅틱, 인터랙티브 튜토리얼 | 튜토리얼 규칙 텍스트는 Lead 리뷰 |
+| **M3 — 온라인 대전** | Firebase/RTDB/Cloud Functions/매칭/Security Rules 전체 | (세부 태스크 분리 시 검토) 대기실·재접속·리플레이 재생 화면 | 서버 신뢰·보안이 걸린 영역이라 기본적으로 Lead 소유. Partner 참여는 UI 서브태스크로 명확히 분리한 뒤 배정 |
+| **M4 — 출시** | 스토어 배포(TestFlight/심사 제출, 계정 권한 필요) | 보드 3종 콘텐츠, 아이콘/스플래시/스토어 에셋, 설정 화면 | 스토어 에셋은 Partner 작업 + Lead 최종 확인 |
 
 ---
 

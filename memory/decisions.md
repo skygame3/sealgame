@@ -7,7 +7,7 @@ Harness Version: 1.1
 
 # Decision Log — SEAL
 
-_Last updated: 2026-07-24_
+_Last updated: 2026-07-26_
 
 ## Template
 
@@ -235,3 +235,34 @@ _Last updated: 2026-07-24_
 **Trade-offs**: 초기 태스크가 4개(TASK-008/009/019b + 문자열 키화) 늘어난다. 추상 게임이라 문자열이 적어 i18n 비용은 낮은 편.
 
 **Consequences**: design-spec §6.5/§6.6 추가. 폴더에 locales/·src/lib/ 추가. GameStore에 persist/restore/handleAppState, SettingsStore 신설. dependencies에 i18next·react-i18next·expo-localization·react-native-mmkv 추가.
+
+---
+
+### ADR-013: 1인 개발 → 2인 개발(Lead + Partner) 체제 전환
+
+- **Date**: 2026-07-26
+- **Status**: Accepted
+- **Decided by**: 사용자
+
+**Context**: 개발 인력이 1명(+AI 에이전트)에서 2명으로 늘었다. 새 인력은 게임 개발 노베이스 입문자로, 학습을 겸하면서 실질적으로 기여할 수 있는 역할 배정이 필요했다.
+
+**Decision**: 기존 레이어 아키텍처(ADR-004: engine/store/ui 분리)를 그대로 인적 역할 경계로 사용한다.
+- **Lead** ([@internalforces](https://github.com/internalforces), 기존 1인 개발자): `engine/`, `ai/`, `net/`(Firebase/Cloud Functions), 아키텍처 결정, 보안, 배포, Partner 코드 리뷰
+- **Partner** ([@kimsky671](https://github.com/kimsky671), 입문자): `components/`, `screens/`(SVG 보드 렌더링), 애니메이션, i18n 문자열, 콘텐츠 데이터(보드 JSON, 스토어 에셋)
+
+`engine/`을 건드리는 PR과 Firebase/Security Rules 변경은 Partner가 작성해도 Lead 리뷰 없이 병합하지 않는다.
+
+**Rationale**:
+- `engine/`은 순수 함수라 UI에서 결과만 소비하면 되므로, Partner가 게임 판정 로직을 몰라도 안전하게 기여 가능 (게임 규칙 오해로 인한 버그가 구조적으로 차단됨)
+- SVG 보드 렌더링·애니메이션은 결과가 즉시 눈에 보여 입문자 학습 동기 부여에 유리
+- 기존 AGENTS.md의 "게임 상태 판정 로직을 UI 레이어에 작성 금지" 규칙과 완전히 일치 — 새 규칙을 만들 필요 없이 기존 경계를 재사용
+
+**Trade-offs**:
+- M1 초반 engine 타입(`GameState`/`Move`)이 확정되기 전까지 Partner는 mock 데이터로 UI 작업을 시작해야 함 — 병렬 진행을 위해 타입 정의(TASK-010)를 다른 engine 로직보다 먼저 끝내는 순서 제약이 생김
+- Partner의 학습 곡선을 고려해 M0~M1 초반 일부 태스크(TASK-001/002)는 온보딩 목적으로 Pair(같이 진행)로 배정 — 순수 분업보다 초반 속도는 느림
+
+**Consequences**:
+- `AGENTS.md`에 "Human Team" 섹션 추가, `memory/project.md`의 Team 섹션 갱신
+- `tasks/backlog.md` 각 태스크에 Owner(Lead/Partner/Pair) 열 추가
+- `roadmap.md`에 마일스톤별 역할 분담 섹션 추가
+- `tasks/active.md`의 태스크 상세 템플릿에 "Human" 필드 추가 (AI 에이전트 역할과 별개 축)

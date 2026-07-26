@@ -14,7 +14,7 @@ AI 협업 개발을 위한 문서 OS. 모든 AI 세션은 여기서 컨텍스트
 ```
 AGENTS.md 를 읽고 규칙을 확인한 뒤,
 memory/project.md → memory/session.md → tasks/active.md 순서로 컨텍스트를 로드해.
-오늘 역할은 [Implementer]야. prompts/implementation.md 를 적용해.
+이 세션은 [Lead/Partner]가 진행해. 오늘 역할은 [Implementer]야. prompts/implementation.md 를 적용해.
 ```
 
 ## 구조
