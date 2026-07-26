@@ -7,7 +7,7 @@ Harness Version: 1.1
 
 # Project: SEAL
 
-_Last updated: 2026-07-24_
+_Last updated: 2026-07-26_
 
 ## Summary
 
@@ -48,12 +48,23 @@ seal/
 
 ## Team
 
-1인 개발 + AI 에이전트 협업. 모든 역할을 사용자가 최종 승인.
+2인 개발 (Lead + Partner) + AI 에이전트 협업. 모든 역할을 Lead가 최종 승인.
+
+| 구성원 | GitHub | 배경 | 담당 영역 |
+|--------|--------|------|-----------|
+| **Lead** (본인) | [@internalforces](https://github.com/internalforces) | 경험 있는 개발자 | `engine/`, `ai/`, `net/`(Firebase), 아키텍처 결정, 보안, 배포, Partner PR 리뷰 |
+| **Partner** | [@kimsky671](https://github.com/kimsky671) | 게임 개발 입문자 (노베이스) | `components/`, `screens/`(SVG 보드·UI), 애니메이션, i18n 문자열, 콘텐츠(보드 JSON, 스토어 에셋) |
+
+- 원칙: Partner는 `engine/`이 반환한 결과를 그대로 그리기만 함 — 게임 판정 로직을 UI 레이어에서 새로 구현하지 않음(AGENTS.md 절대 금지 사항과 동일)
+- 온보딩 경로: Partner는 `docs/PROJECT-GUIDE.md`부터 읽는다
+- 태스크별 담당 배정은 `tasks/backlog.md`의 Owner 열, 마일스톤별 요약은 `roadmap.md` 참조
+- 근거: `memory/decisions.md`의 ADR-013
 
 ## Recent Changes
 
 | Date | Change |
 |------|--------|
+| 2026-07-26 | 1인 개발 → 2인 개발(Lead + Partner) 체제 전환, 마일스톤별 역할 분담 확정 (ADR-013) |
 | 2026-07-24 | AI Development Harness v1.1 초기 셋업 (standard tier) |
 | 2026-07-24 | 기술 스택 확정: Expo / SVG / Zustand / Firebase / 클라이언트 Minimax |
 | 2026-07-24 | 게임 규칙 경계 케이스 5건 확정 (ADR-008) → docs/game-rules.md v1.0 |
