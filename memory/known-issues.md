@@ -66,7 +66,7 @@ engine에 `RuleConfig.crystalPlaceMode` 플래그를 M1부터 구현해 재작�
 
 | ID | 사항 | 결정 시점 |
 |----|------|----------|
-| OPEN-1 | H보드 최종 좌표·엣지 | TASK-006 |
+| OPEN-1 | H보드 좌표·엣지의 밸런스 재검토 | M2 자가대전 |
 | OPEN-2 | AI 평가 가중치 w1~w5 | M2 |
 | OPEN-3 | crystalPlaceMode 기본값 (=BAL-001) | M2 |
 | OPEN-4 | 저사양 AI depth 상한 | M2 |

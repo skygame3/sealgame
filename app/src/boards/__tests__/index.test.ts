@@ -2,6 +2,7 @@ import { describe, expect, it } from '@jest/globals';
 
 import type { BoardDef } from '../../engine/types';
 import { validateBoard } from '../index';
+import hBoard from '../../../../boards/h.json';
 
 const validBoard = (): BoardDef => ({
   id: 'test',
@@ -21,6 +22,13 @@ const validBoard = (): BoardDef => ({
 });
 
 describe('validateBoard', () => {
+  it('accepts the MVP H board content', () => {
+    expect(validateBoard(hBoard as BoardDef)).toEqual({ isValid: true, issues: [] });
+    expect(hBoard.nodes).toHaveLength(13);
+    expect(hBoard.lockedNodes).toHaveLength(2);
+    expect(hBoard.keyNodes).toEqual(['c']);
+  });
+
   it('accepts a connected board with a capture path', () => {
     expect(validateBoard(validBoard())).toEqual({ isValid: true, issues: [] });
   });
