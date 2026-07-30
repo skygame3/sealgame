@@ -7,7 +7,7 @@ Harness Version: 1.1
 
 # Known Issues — SEAL
 
-_Last updated: 2026-07-24_
+_Last updated: 2026-07-30_
 
 ## Active Bugs
 
@@ -49,7 +49,7 @@ engine에 `RuleConfig.crystalPlaceMode` 플래그를 M1부터 구현해 재작�
 
 | ID | Description | Impact | Target Resolution |
 |----|-------------|--------|-------------------|
-| — | (없음) | — | — |
+| SEC-001 | Expo SDK 57 및 Jest 전이 의존성의 `npm audit` 결과에 high 취약점이 보고됨. 호환 가능한 자동 수정이 없고, `npm audit fix --force`는 Expo SDK를 46으로 내리므로 적용하지 않음. | 개발 도구 공급망 점검 필요. 앱 코드의 런타임 동작에는 현재 영향 확인되지 않음. | Expo SDK/Jest 호환 보안 업데이트가 나오면 별도 의존성 업데이트 PR에서 재검토 |
 
 ## Anticipated Risks (사전 식별)
 

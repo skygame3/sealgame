@@ -29,9 +29,11 @@ _Last updated: 2026-07-24_
 | Package | Version | Purpose |
 |---------|---------|---------|
 | typescript | ^5 | 타입 |
-| jest / jest-expo | latest | 테스트 러너 |
-| @testing-library/react-native | ^12 | 컴포넌트 테스트 |
-| eslint / prettier | latest | 린트·포맷 |
+| jest-expo | ~57.0.3 | Expo 호환 테스트 러너 |
+| @testing-library/react-native | ^14.0.1 | 컴포넌트 테스트 |
+| react-test-renderer | 19.2.3 | React Native 테스트 렌더러 |
+| eslint / eslint-config-expo | ^9 / ~57.0.1 | Expo 규칙 기반 린트 |
+| prettier | ^3.9.6 | 포맷 |
 | eas-cli | latest | 빌드·배포 |
 | firebase-tools | latest | 에뮬레이터·배포 |
 
