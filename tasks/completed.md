@@ -11,6 +11,7 @@ _Last updated: 2026-07-26_
 
 | ID | Task | Completed | Owner | Notes |
 |----|------|-----------|-------|-------|
+| TASK-005 | 보드 정의 JSON 스키마 설계 + 유효성 검사기 | 2026-07-30 | Implementer | JSON Schema·그래프 검증기·보드 콘텐츠 작성 가이드와 테스트 구성. 리뷰: `reports/review-2026-07-30-task-005.md` |
 | TASK-004 | 폴더 구조 확정 (engine/ai/store/ui/net) | 2026-07-30 | Implementer | `app/src` 레이어, `boards/`, `functions/src/` 구조를 Git 추적 마커로 확정. 리뷰: `reports/review-2026-07-30-task-004.md` |
 | TASK-003 | GitHub Actions CI (lint + typecheck + test) | 2026-07-30 | Implementer | `main` 대상 PR CI에 format·lint·typecheck·test를 구성하고, `CI / quality`를 필수 보호 검사로 지정. 리뷰: `reports/review-2026-07-30-task-003.md` |
 | TASK-002 | ESLint / Prettier / Jest 설정 | 2026-07-30 | Implementer | Expo 호환 린트·포맷·테스트 스크립트와 smoke test 구성. 리뷰: `reports/review-2026-07-30-task-002.md` |
