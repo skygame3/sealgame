@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+
+# App dependencies and generated Expo output
+app/node_modules/
+app/.expo/
+app/dist/
+app/web-build/
+app/expo-env.d.ts
+app/*.tsbuildinfo
+
+# Local configuration
+.env*.local
