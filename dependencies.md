@@ -19,9 +19,9 @@ _Last updated: 2026-07-24_
 | zustand | ^5 | 클라이언트 상태 관리 | MIT |
 | firebase | ^11 | Auth / RTDB 클라이언트 SDK | Apache-2.0 |
 | expo-router | latest | 화면 라우팅 | MIT |
-| i18next | ^23 | 국제화 코어 (§6.5) | MIT |
-| react-i18next | ^14 | React 바인딩 | MIT |
-| expo-localization | latest | 기기 언어 감지 | MIT |
+| i18next | ^26.3.6 | 국제화 코어 (§6.5) | MIT |
+| react-i18next | ^17.0.11 | React 바인딩 | MIT |
+| expo-localization | ~57.0.1 | 기기 언어 감지 | MIT |
 | react-native-mmkv | ^3 | 로컬 저장 (게임/설정/리플레이) | MIT |
 
 ## Dev Dependencies

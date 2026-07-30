@@ -1,0 +1,42 @@
+{
+  "menu": {
+    "title": "SEAL",
+    "subtitle": "개발 중인 전략 보드게임",
+    "local": "로컬 대전",
+    "ai": "AI와 대전",
+    "continue": "이어하기"
+  },
+  "game": {
+    "turn": "{{name}}의 차례",
+    "pass": "패스",
+    "sealed": "봉인됨"
+  },
+  "crystal": {
+    "count_one": "결정 {{count}}개",
+    "count_other": "결정 {{count}}개",
+    "place": "추가 배치",
+    "restore": "봉인 복구",
+    "unlock": "잠긴 노드 개방"
+  },
+  "result": {
+    "winner": "{{name}} 승리",
+    "draw": "무승부"
+  },
+  "tutorial": {
+    "next": "다음",
+    "skip": "건너뛰기"
+  },
+  "settings": {
+    "title": "설정",
+    "language": "언어",
+    "system": "시스템 설정"
+  },
+  "error": {
+    "unknown": "알 수 없는 오류가 발생했습니다."
+  },
+  "board": {
+    "h": {
+      "name": "H"
+    }
+  }
+}

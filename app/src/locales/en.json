@@ -1,0 +1,42 @@
+{
+  "menu": {
+    "title": "SEAL",
+    "subtitle": "A strategy board game in development.",
+    "local": "Local game",
+    "ai": "Play AI",
+    "continue": "Continue"
+  },
+  "game": {
+    "turn": "{{name}}'s turn",
+    "pass": "Pass",
+    "sealed": "Sealed"
+  },
+  "crystal": {
+    "count_one": "{{count}} crystal",
+    "count_other": "{{count}} crystals",
+    "place": "Place an extra stone",
+    "restore": "Restore a seal",
+    "unlock": "Unlock a node"
+  },
+  "result": {
+    "winner": "{{name}} wins",
+    "draw": "Draw"
+  },
+  "tutorial": {
+    "next": "Next",
+    "skip": "Skip"
+  },
+  "settings": {
+    "title": "Settings",
+    "language": "Language",
+    "system": "System default"
+  },
+  "error": {
+    "unknown": "An unknown error occurred."
+  },
+  "board": {
+    "h": {
+      "name": "H"
+    }
+  }
+}

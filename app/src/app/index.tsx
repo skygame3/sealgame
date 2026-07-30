@@ -1,11 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native';
+import { useTranslation } from 'react-i18next';
 
 /** Temporary home screen while game features are implemented. */
 export default function HomeScreen() {
+  const { t } = useTranslation();
+
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>SEAL</Text>
-      <Text style={styles.subtitle}>A strategy board game in development.</Text>
+      <Text style={styles.title}>{t('menu.title')}</Text>
+      <Text style={styles.subtitle}>{t('menu.subtitle')}</Text>
     </View>
   );
 }
