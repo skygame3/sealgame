@@ -13,12 +13,17 @@ Harness Version: 1.1
 
 ## Session Info
 
-- **Date**: 2026-07-24
-- **Agent Role**: Architect
-- **Session Goal**: 구현 착수 전 전체 설계 완결
+- **Date**: 2026-07-30
+- **Agent Role**: Implementer
+- **Session Goal**: M0 기반 구축 완료
 
 ## Completed This Session
 
+- [x] M0 TASK-001~006, TASK-008~009 구현·검증·리뷰·푸시 완료
+- [x] `main` 보호: PR 승인·대화 해결·선형 이력 및 `CI / quality` 필수 검사
+- [x] Expo Router + strict TypeScript + lint/format/test/CI 구성
+- [x] 보드 JSON Schema, validateBoard, MVP H 보드와 자동 검증 구성
+- [x] ko/en i18n·MMKV 저장 경계 구성
 - [x] 하네스 v1.1 초기 셋업
 - [x] 게임 규칙 5건 확정 (ADR-008), game-rules.md v1.0
 - [x] 밸런스 대안 플래그 설계 (ADR-009)
@@ -51,12 +56,10 @@ OPEN-1~6: 전부 파라미터/후속 마일스톤. 특히 OPEN-3(crystalPlaceMod
 
 ## Next Session: To-Do
 
-1. **TASK-001** — Expo(TS strict) 초기화 + GitHub 저장소 + 폴더 구조 (design-spec §7)
-   - app.config.ts scheme/bundleId 필수, npx expo install 사용, EXPO_PUBLIC_ prefix
-2. TASK-002 — ESLint/Prettier/Jest(jest-expo)
-3. TASK-003 — GitHub Actions CI
-4. TASK-005/006 — validateBoard + h.json (design-spec §4)
-5. TASK-010 — engine/types.ts (design-spec §2)
+1. **TASK-011** — `engine`: 돌 놓기 + 합법수 생성
+2. TASK-012 — `engine`: 포획 판정 (다중 동시 포획 포함)
+3. TASK-013~015 — 봉인·결정·종료/승패 규칙
+4. TASK-016 — engine 단위 테스트 커버리지 100%
 
 ## Important Context
 
@@ -64,3 +67,5 @@ OPEN-1~6: 전부 파라미터/후속 마일스톤. 특히 OPEN-3(crystalPlaceMod
 - 규칙 로직은 engine/에만. functions/도 src/engine을 import해 동일 코드로 검증.
 - BAL-001(영구 제거 스노우볼) M2 검증 최우선. crystalPlaceMode 플래그로 A/B.
 - 구현은 design-spec §10 순서대로. 순서 6 완료 = MVP 플레이 가능.
+- MMKV v4는 Expo Go가 아닌 development/production native build가 필요하다. 실제 엔진
+  serialize/deserialize 연결은 TASK-011~015 구현 후 store에서 수행한다.

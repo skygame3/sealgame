@@ -17,8 +17,8 @@ _Last updated: 2026-07-26_
 ## Current State
 
 - **Version**: v0.1.0-dev
-- **Phase**: M0 착수 — 규칙 확정 완료, 프로젝트 초기화 대기
-- **Next milestone**: M0 — 기반 구축
+- **Phase**: M0 완료 — 기반 구축 및 검증 환경 구성 완료
+- **Next milestone**: M1 — 규칙 엔진 & 로컬 플레이
 - **Overall health**: 🟢 Good
 
 ## Tech Summary
@@ -64,6 +64,7 @@ seal/
 
 | Date | Change |
 |------|--------|
+| 2026-07-30 | M0 완료: Expo 앱, CI, 보드 스키마/H 보드, i18n, MMKV 저장 경계 구성 |
 | 2026-07-26 | 1인 개발 → 2인 개발(Lead + Partner) 체제 전환, 마일스톤별 역할 분담 확정 (ADR-013) |
 | 2026-07-24 | AI Development Harness v1.1 초기 셋업 (standard tier) |
 | 2026-07-24 | 기술 스택 확정: Expo / SVG / Zustand / Firebase / 클라이언트 Minimax |
