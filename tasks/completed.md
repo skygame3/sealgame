@@ -11,6 +11,7 @@ _Last updated: 2026-07-26_
 
 | ID | Task | Completed | Owner | Notes |
 |----|------|-----------|-------|-------|
+| TASK-008 | i18n 구조 셋업 (i18next + ko/en + expo-localization) | 2026-07-30 | Implementer | ko/en 리소스·키 정합성 테스트·기기 언어 폴백·초기 화면 키 전환 구성. 리뷰: `reports/review-2026-07-30-task-008.md` |
 | TASK-006 | H형 보드 작성 (노드 12~16, 잠긴 2, 핵심 1) | 2026-07-30 | Implementer | 13노드·잠긴 2·핵심 1의 `boards/h.json`을 작성하고 자동 유효성 검사에 연결. 리뷰: `reports/review-2026-07-30-task-006.md` |
 | TASK-005 | 보드 정의 JSON 스키마 설계 + 유효성 검사기 | 2026-07-30 | Implementer | JSON Schema·그래프 검증기·보드 콘텐츠 작성 가이드와 테스트 구성. 리뷰: `reports/review-2026-07-30-task-005.md` |
 | TASK-004 | 폴더 구조 확정 (engine/ai/store/ui/net) | 2026-07-30 | Implementer | `app/src` 레이어, `boards/`, `functions/src/` 구조를 Git 추적 마커로 확정. 리뷰: `reports/review-2026-07-30-task-004.md` |
