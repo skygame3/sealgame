@@ -22,7 +22,8 @@ _Last updated: 2026-07-24_
 | i18next | ^26.3.6 | 국제화 코어 (§6.5) | MIT |
 | react-i18next | ^17.0.11 | React 바인딩 | MIT |
 | expo-localization | ~57.0.1 | 기기 언어 감지 | MIT |
-| react-native-mmkv | ^3 | 로컬 저장 (게임/설정/리플레이) | MIT |
+| react-native-mmkv | ^4.3.2 | 로컬 저장 (게임/설정/리플레이) | MIT |
+| react-native-nitro-modules | ^0.36.3 | MMKV v4 네이티브 런타임 | MIT |
 
 ## Dev Dependencies
 
